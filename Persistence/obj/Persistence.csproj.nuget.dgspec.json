@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "C:\\JardineriaV2\\Persistence\\Persistence.csproj": {}
+    "c:\\JardineriaV2\\Persistence\\Persistence.csproj": {}
   },
   "projects": {
     "C:\\JardineriaV2\\Domain\\Domain.csproj": {
@@ -73,14 +73,14 @@
         }
       }
     },
-    "C:\\JardineriaV2\\Persistence\\Persistence.csproj": {
+    "c:\\JardineriaV2\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\JardineriaV2\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\JardineriaV2\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "C:\\JardineriaV2\\Persistence\\Persistence.csproj",
+        "projectPath": "c:\\JardineriaV2\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\ddieg\\.nuget\\packages\\",
-        "outputPath": "C:\\JardineriaV2\\Persistence\\obj\\",
+        "outputPath": "c:\\JardineriaV2\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ddieg\\AppData\\Roaming\\NuGet\\NuGet.Config",

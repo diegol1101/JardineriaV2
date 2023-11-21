@@ -84,3 +84,5 @@ C:\JardineriaV2\API\obj\Debug\net7.0\refint\API.dll
 C:\JardineriaV2\API\obj\Debug\net7.0\API.pdb
 C:\JardineriaV2\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 C:\JardineriaV2\API\obj\Debug\net7.0\ref\API.dll
+C:\JardineriaV2\API\bin\Debug\net7.0\AspNetCoreRateLimit.dll
+C:\JardineriaV2\API\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Versioning.dll

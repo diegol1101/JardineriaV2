@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "s8ahR+cbMuKspv/2OIELH2t+oqxsif/Y1P9sYZOP3QJx9A+D/2xSXd+Qbu3C1WJy2/AU2BG/owFztzTKZ8Y9Jw==",
+  "dgSpecHash": "8bOMcjkxVid0KAaWVaTWLYiGOY855L/0p1658tSZSPQn2H6gssO+9JCNQwUlO6Ky+mYodvGNQs6M0GmDf5LHKg==",
   "success": true,
-  "projectFilePath": "C:\\JardineriaV2\\Persistence\\Persistence.csproj",
+  "projectFilePath": "c:\\JardineriaV2\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ddieg\\.nuget\\packages\\csvhelper\\30.0.1\\csvhelper.30.0.1.nupkg.sha512",
     "C:\\Users\\ddieg\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",

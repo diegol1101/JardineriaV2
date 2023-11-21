@@ -9,6 +9,7 @@ namespace Domain.Interfaces
     public interface IGenericRepository<T> where T : class
     {
         Task<T> GetByIdAsync(int id);
+        Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize, string search);
         Task<IEnumerable<T>> GetAllAsync();
         IEnumerable<T> Find(Expression<Func<T, bool>> expression);
         void Add(T entity);

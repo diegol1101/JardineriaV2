@@ -8,7 +8,8 @@ namespace Domain.Interfaces
 {
     public interface ICliente :IGenericRepository<Cliente>
     {
-        Task<IEnumerable<Cliente>> ClientesEspanol();
+        Task<IEnumerable<Cliente>> ClientesEspaña();
+        Task<(int totalRegistros, object registros)> GetSpainClient(int pageIndez, int pageSize, string search); // 1.1
         Task<IEnumerable<object>> ClientesConPagosEn2008();
         Task<IEnumerable<Cliente>> ClientesEnMadrid();
         Task<IEnumerable<object>> ClientesConRepresentantesVentas();
@@ -20,7 +21,9 @@ namespace Domain.Interfaces
         Task<IEnumerable<object>> ClientesConPedidosNoEntregadosATiempo();
         Task<IEnumerable<object>> GamasProductosCompradasPorCliente();
         Task<IEnumerable<object>> ObtenerClientesSinPagos();
+        Task<(int totalRegistros, object registros)> ObtenerClientesSinPagosv2(int pageIndez, int pageSize, string search); // 1.1
         Task<IEnumerable<Cliente>> ClientesNoPagoNoPedido();
+        Task<(int totalRegistros, object registros)> ClientesNoPagoNoPedidov2(int pageIndez, int pageSize, string search); // 1.1
         Task<IEnumerable<object>> EmpleadoNoCliente();
         Task<IEnumerable<object>> EmpleadoNoOficinaNoCliente();
         Task<IEnumerable<object>> ClientesConPedidosSinPagos();

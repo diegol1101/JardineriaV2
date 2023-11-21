@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using API.Dtos;
+using API.Helpers.Errors;
 using AutoMapper;
 using Domain.Entities;
 using Domain.Interfaces;
@@ -97,13 +98,26 @@ public class ClienteController : ApiBaseController
     }
 
     [HttpGet("clientesespaña")]
+    [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-    public async Task<ActionResult<IEnumerable<ClienteDto>>> ClientesEspanol()
+    public async Task<ActionResult<IEnumerable<ClienteDto>>> ClientesEspaña()
     {
-        var cliente = await unitofwork.Clientes.ClientesEspanol();
+        var cliente = await unitofwork.Clientes.ClientesEspaña();
         return mapper.Map<List<ClienteDto>>(cliente);
+    }
+    
+
+    [HttpGet("GetSpainClient")]
+    [MapToApiVersion("1.1")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    
+    public async Task<ActionResult<Pager<object>>> GetSpainClient([FromQuery] Params paisParams)
+    {
+        var entidad = await unitofwork.Clientes.GetSpainClient(paisParams.PageIndex, paisParams.PageSize, paisParams.Search);
+        var listEntidad = mapper.Map<List<object>>(entidad.registros);
+        return new Pager<object>(listEntidad, entidad.totalRegistros, paisParams.PageIndex, paisParams.PageSize, paisParams.Search);
     }
 
     [HttpGet("ClientesConPagosEn2008")]
@@ -207,6 +221,7 @@ public class ClienteController : ApiBaseController
     }
 
     [HttpGet("ObtenerClientesSinPagos")]
+    [MapToApiVersion("1.0")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
@@ -214,6 +229,17 @@ public class ClienteController : ApiBaseController
     {
         var cliente = await unitofwork.Clientes.ObtenerClientesSinPagos();
         return mapper.Map<List<object>>(cliente);
+    }
+    [HttpGet("ObtenerClientesSinPagosv2")]
+    [MapToApiVersion("1.1")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    
+    public async Task<ActionResult<Pager<object>>> ObtenerClientesSinPagosv2([FromQuery] Params paisParams)
+    {
+        var entidad = await unitofwork.Clientes.ObtenerClientesSinPagosv2(paisParams.PageIndex, paisParams.PageSize, paisParams.Search);
+        var listEntidad = mapper.Map<List<object>>(entidad.registros);
+        return new Pager<object>(listEntidad, entidad.totalRegistros, paisParams.PageIndex, paisParams.PageSize, paisParams.Search);
     }
 
     [HttpGet("ClientesNoPagoNoPedido")]
@@ -224,6 +250,18 @@ public class ClienteController : ApiBaseController
     {
         var cliente = await unitofwork.Clientes.ClientesNoPagoNoPedido();
         return mapper.Map<List<Cliente>>(cliente);
+    }
+
+    [HttpGet("ClientesNoPagoNoPedidov2")]
+    [MapToApiVersion("1.1")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    
+    public async Task<ActionResult<Pager<object>>> ClientesNoPagoNoPedidov2([FromQuery] Params paisParams)
+    {
+        var entidad = await unitofwork.Clientes.ClientesNoPagoNoPedidov2(paisParams.PageIndex, paisParams.PageSize, paisParams.Search);
+        var listEntidad = mapper.Map<List<object>>(entidad.registros);
+        return new Pager<object>(listEntidad, entidad.totalRegistros, paisParams.PageIndex, paisParams.PageSize, paisParams.Search);
     }
 
     [HttpGet("EmpleadoNoCliente")]

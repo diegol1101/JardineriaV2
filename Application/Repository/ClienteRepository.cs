@@ -30,12 +30,39 @@ namespace Application.Repository
             .FirstOrDefaultAsync(p => p.CodigoCliente == id);
         }
 
-        public async Task<IEnumerable<Cliente>> ClientesEspanol()
+        public async Task<IEnumerable<Cliente>> ClientesEspaña()
         {
             var cli = await _context.Clientes
-                    .Where(a => a.Pais.ToUpper() == "spain")
+                    .Where(p => p.Pais.ToUpper() == "spain")
                     .ToListAsync();
             return cli;
+        }
+
+        public virtual async Task<(int totalRegistros, object registros)> GetSpainClient(int pageIndez, int pageSize, string search) // 1.1
+        {
+            var query = (
+                    from cli in _context.Clientes
+                    where cli.Pais == "Spain"
+                    select new
+                    {
+                        Nombre = cli.NombreCliente,
+                        cli.Pais
+                    }
+                );
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(p => p.Nombre.ToLower().Contains(search));
+            }
+
+            query = query.OrderBy(p => p.Nombre);
+            var totalRegistros = await query.CountAsync();
+            var registros = await query
+                .Skip((pageIndez - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (totalRegistros, registros);
         }
 
         public async Task<IEnumerable<object>> ClientesConPagosEn2008()
@@ -47,6 +74,8 @@ namespace Application.Repository
                             .ToListAsync();
             return clientes;
         }
+
+
 
         public async Task<IEnumerable<Cliente>> ClientesEnMadrid()
         {
@@ -150,7 +179,7 @@ namespace Application.Repository
         {
             var listadoEmpleadosConJefes = await _context.Empleados
                 .Include(e => e.CodigoJefeNavigation)
-                .ThenInclude(jefe => jefe.CodigoJefeNavigation) // Jefe del Jefe
+                .ThenInclude(jefe => jefe.CodigoJefeNavigation)
                 .Select(e => new
                 {
                     NombreEmpleado = e.Nombre,
@@ -212,12 +241,59 @@ namespace Application.Repository
             return clientesSinPagos;
         }
 
+        public virtual async Task<(int totalRegistros, object registros)> ObtenerClientesSinPagosv2(int pageIndez, int pageSize, string search) // 1.1
+        {
+            var query =  _context.Clientes
+                .Include(c => c.Pagos)
+                .Where(c => c.Pagos.All(p => p == null))
+                .Select(c => new
+                {
+                    c.NombreCliente
+                });
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(p => p.NombreCliente.ToLower().Contains(search));
+            }
+
+            query = query.OrderBy(p => p.NombreCliente);
+            var totalRegistros = await query.CountAsync();
+            var registros = await query
+                .Skip((pageIndez - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (totalRegistros, registros);
+        }
+
         public async Task<IEnumerable<Cliente>> ClientesNoPagoNoPedido()
         {
             return await _context.Clientes
                                 .Where(c => !c.Pedidos.Any() &&
                                 !c.Pagos.Any())
                                 .ToListAsync();
+        }
+
+        public virtual async Task<(int totalRegistros, object registros)> ClientesNoPagoNoPedidov2(int pageIndez, int pageSize, string search) // 1.1
+        {
+            var query = _context.Clientes
+                                .Where(c => !c.Pedidos.Any() &&
+                                !c.Pagos.Any());
+                                
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query = query.Where(p => p.NombreCliente.ToLower().Contains(search));
+            }
+
+            query = query.OrderBy(p => p.NombreCliente);
+            var totalRegistros = await query.CountAsync();
+            var registros = await query
+                .Skip((pageIndez - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (totalRegistros, registros);
         }
 
         public async Task<IEnumerable<object>> EmpleadoNoCliente()
@@ -579,7 +655,7 @@ namespace Application.Repository
             return clientes;
         }
 
-        
+
 
 
 
