@@ -335,7 +335,7 @@ En esta sección se presentan consultas variadas que abordan diferentes aspectos
 - Devuelve el nombre de los clientes que hayan hecho pedidos en 2008, ordenados alfabéticamente de menor a mayor.
 - (http://localhost:5117/api/Cliente/ClientesConPedidosEn2008v2)
 
-## 3. Clientes sin Pagos (Versión 3)
+## 3. Clientes sin Pagos 
 
 - Devuelve el nombre del cliente, el nombre y primer apellido de su representante de ventas, y el número de teléfono de la oficina del representante de ventas, de aquellos clientes que no han realizado ningún pago.
 - (http://localhost:5117/api/Cliente/ClientesSinPagos3)
@@ -345,7 +345,7 @@ En esta sección se presentan consultas variadas que abordan diferentes aspectos
 - Devuelve el listado de clientes donde aparece el nombre del cliente, el nombre y primer apellido de su representante de ventas, y la ciudad donde está su oficina.
 - (http://localhost:5117/api/Cliente/ClientesConRepresentanteYOficina)
 
-## 5. Empleados sin Ventas (Versión 2)
+## 5. Empleados sin Ventas 
 
 - Devuelve el nombre, apellidos, puesto y teléfono de la oficina de aquellos empleados que no son representantes de ventas de ningún cliente.
 - (http://localhost:5117/api/Empleado/EmpleadosSinVentas4)
