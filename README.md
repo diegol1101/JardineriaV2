@@ -12,7 +12,7 @@ Este repositorio contiene una API RESTful que ofrece diversas consultas a una ba
 
 ### 1. Clientes Españoles
 - Devuelve un listado con el nombre de todos los clientes españoles.
-- [Consulta](http://localhost:5117/api/Cliente/clientesespaña)
+- (http://localhost:5117/api/Cliente/clientesespaña)
 
 ### 2. Estados de Pedidos
 - Devuelve un listado con los distintos estados por los que puede pasar un pedido.
