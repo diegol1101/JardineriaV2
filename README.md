@@ -118,7 +118,10 @@ En esta sección, se presentan consultas que involucran múltiples tablas y se r
 ## 1. Clientes sin Pagos
 
 - Devuelve un listado que muestre solamente los clientes que no han realizado ningún pago.
+- version 1.0
 - (http://localhost:5117/api/Cliente/ObtenerClientesSinPagos)
+- version1.1
+- (http://localhost:5117/api/Cliente/ObtenerClientesSinPagosv2)
 
 ## 2. Clientes sin Pago y sin Pedido
 
