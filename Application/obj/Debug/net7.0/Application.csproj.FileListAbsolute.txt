@@ -1,0 +1,17 @@
+C:\JardineriaV2\Application\bin\Debug\net7.0\Application.deps.json
+C:\JardineriaV2\Application\bin\Debug\net7.0\Application.dll
+C:\JardineriaV2\Application\bin\Debug\net7.0\Application.pdb
+C:\JardineriaV2\Application\bin\Debug\net7.0\Domain.dll
+C:\JardineriaV2\Application\bin\Debug\net7.0\Persistence.dll
+C:\JardineriaV2\Application\bin\Debug\net7.0\Domain.pdb
+C:\JardineriaV2\Application\bin\Debug\net7.0\Persistence.pdb
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.csproj.AssemblyReference.cache
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.AssemblyInfoInputs.cache
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.AssemblyInfo.cs
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.csproj.CoreCompileInputs.cache
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.csproj.CopyComplete
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.dll
+C:\JardineriaV2\Application\obj\Debug\net7.0\refint\Application.dll
+C:\JardineriaV2\Application\obj\Debug\net7.0\Application.pdb
+C:\JardineriaV2\Application\obj\Debug\net7.0\ref\Application.dll

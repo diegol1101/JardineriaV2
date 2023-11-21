@@ -1,0 +1,15 @@
+C:\JardineriaV2\Persistence\bin\Debug\net7.0\Persistence.deps.json
+C:\JardineriaV2\Persistence\bin\Debug\net7.0\Persistence.dll
+C:\JardineriaV2\Persistence\bin\Debug\net7.0\Persistence.pdb
+C:\JardineriaV2\Persistence\bin\Debug\net7.0\Domain.dll
+C:\JardineriaV2\Persistence\bin\Debug\net7.0\Domain.pdb
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.csproj.AssemblyReference.cache
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfoInputs.cache
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.AssemblyInfo.cs
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.csproj.CoreCompileInputs.cache
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.csproj.CopyComplete
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.dll
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\refint\Persistence.dll
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\Persistence.pdb
+C:\JardineriaV2\Persistence\obj\Debug\net7.0\ref\Persistence.dll

@@ -1,0 +1,12 @@
+C:\JardineriaV2\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\JardineriaV2\Domain\bin\Debug\net7.0\Domain.dll
+C:\JardineriaV2\Domain\bin\Debug\net7.0\Domain.pdb
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.dll
+C:\JardineriaV2\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\JardineriaV2\Domain\obj\Debug\net7.0\Domain.pdb
+C:\JardineriaV2\Domain\obj\Debug\net7.0\ref\Domain.dll
