@@ -126,7 +126,10 @@ En esta sección, se presentan consultas que involucran múltiples tablas y se r
 ## 2. Clientes sin Pago y sin Pedido
 
 - Devuelve un listado que muestre los clientes que no han realizado ningún pago y los que no han realizado ningún pedido.
+- version 1.0
 - (http://localhost:5117/api/Cliente/ClientesNoPagoNoPedido)
+- version 1.1
+- (http://localhost:5117/api/Cliente/ClientesNoPagoNoPedidov2)
 
 ## 3. Empleados sin Cliente
 
